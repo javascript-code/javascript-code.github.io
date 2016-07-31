@@ -1,0 +1,218 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,greek,greek-ext,latin-ext,cyrillic,vietnamese,cyrillic-ext);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic&subset=latin,vietnamese,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+@import url(https://fonts.googleapis.com/css?family=Hind:400,700,600,500,300&subset=latin,latin-ext,devanagari);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700italic,700,600italic,600,400italic,300italic,300,100italic,100&subset=latin,latin-ext);
+
+
+
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-family: 'Hind', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+
+	.jsie {color: #D89E9E; margin-left: 36px;}
+    .script {font-size: 22px;   background-color: rgba(253, 156, 214, 0.18);  padding-left: 36px;}
+    .var-block {background-color: #B3C4F3;}
+    .var {color: #3A7B25; background-color: rgba(177, 102, 255, 1.0); margin: 0px 0; margin-left: 36px;}
+    .var-color {color: #E8E8E8; background: rgba(226, 28, 120, 0.08); font-family: 'Josefin Sans', sans-serif;
+font-weight: 300;}
+    .var-name {color: #E4FF07; background: rgba(216, 255, 0, 0.14); font-family: 'Hind', sans-serif;}
+    .var-equal {color: #00FFB8; background: rgba(226, 28, 120, 0.08); font-family: 'Josefin Sans', sans-serif;}
+    .var-new {color: #009688; background: rgba(226, 28, 120, 0.08);}
+    .var-array {color: #FFBC00; background: rgba(226, 28, 120, 0.08);}
+    .var-array-namber {color: #00F3FF; background: rgba(226, 28, 120, 0.08);}
+    .var-namber {color: #1BFF2D; background: rgba(226, 28, 120, 0.08); font-family: 'Josefin Sans', sans-serif;}
+    .var-open-parenthesis {color: #9C27B0; background: rgba(226, 28, 120, 0.08);}
+    .var-close-parenthesis {color: #DC9CD7; background: rgba(226, 28, 120, 0.08);}
+    .var-semicolon {color: #60D6DC; background: rgba(226, 28, 120, 0.08);}
+    .var-minus {color: #31CC1E; background: rgba(226, 28, 120, 0.08);}
+
+    .function-color {color: #EF0404; background: rgba(226, 28, 120, 0.08); font-family: 'Montserrat', sans-serif; font-style: italic;}
+    .function-block {background-color: #7CB1D0; padding: 15px 0;    margin-left: 36px;}
+    .function {color: #3A7B25; background-color: rgba(204, 179, 239, 1.0); margin: 1px 0; margin-left: 36px; border-left: 1px solid #fff;}
+    .function-open-parenthesis {color: #9C27B0; background: rgba(226, 28, 120, 0.08);}
+    .function-close-parenthesis {color: #FF00EB; background: rgba(226, 28, 120, 0.08);}
+
+    .if {color: #3A7B25; background-color: rgba(174, 157, 239, 1.0); margin: 1px 0; margin-left: 36px;}
+
+
+    .if-color {padding-left: 0px; color: #FF0099;}
+    .if-open-parenthesis {color: #F00;}
+    .if-close-parenthesis {display: block; color: #FFA02B;}
+    .if-in {margin-left: 36px;     background: #36E4DC;}
+    
+
+    .object {color: #E85C0A; background: rgba(226, 28, 120, 0.08); font-family: 'Josefin Sans', sans-serif;}
+
+    .document {color: #001FFF; background: rgba(226, 28, 120, 0.08); font-family: 'Josefin Sans', sans-serif;}
+    .getElementById {color: #E69F00;}
+
+    .if-open-parenthesis-oval {color: #000;}
+    .if-close-parenthesis-oval {color: #000;}
+    .block-if {    background: #369CE4; margin-left: 36px;}
+    .if-semicolon {color: #D20101;}
+    .value {color: #2308B7;}
+    .offsetTop {color: #A96464;}
+    .offsetParent {color: #988F23;}
+    .inif {background: rgba(152, 10, 76, 0.18);     margin-left: 36px;}
+    .layer { color: #CE008E;}
+    .if-open-n {        background: #369CE4; color: #CCC2B7;}
+    .if-close-n {        background: #369CE4;color: #8EF3C9;}
+    .if-n {    background: #2DAF02; color: #000;}
+    .getOffsetTop {color: #AF3684;}
+    .function-open {color: #325BEF;}
+    .function-close {color: #AF3684;}
+    .if-and-and {color: #003CE4;}
+    .while {color: #D612BE;}
+    .inif .if-in {background: #92BFD4;}
+    .if-equal {color: #114E9A;}
+    .if-plus-equal {color: #008FF5;}
+    .if-tag-body {color: #002BA5; font-family: 'Montserrat', sans-serif;}
+    .if-not-equal {color: #B16F0B;}
+    .if-tagName {color: #9C0125;}
+    .if-point {color: #FFFFFF;}
+
+    .else {margin-left: 36px; background: #50B5A7;}
+    .block-else {margin-left: 36px; background: #87C572;}
+    .else-open-parenthesis {color: #FF0101;}
+    .else-close-parenthesis {color: #FF8D00;}
+    .else-in-if {color: #000;     margin-left: 0px;}
+    .else-in-if-open {color: #000;}
+    .else-in-if-close {color: #000;}
+    .else-tag-body {color: #000;}
+    .else-color {color: #A20078;}
+    .else-in {margin-left: 0px;}
+    .else-in-if-block {margin-left: 32px;     background: #B7FF6A;}
+    .else-in-while {margin-left: 32px;}
+    .else-in-if-parenthesis {background: #F7B6B6; margin-left: 32px;}
+    .else-in-if-parenthesis-if {background: #CAF997; margin-left: 32px;}
+    .return {color: #FF0C0C;}
+    .else-point {color: #FFF;}
+    .else-semicolon{color: #FFF;}
+    .function-return {background: #CAF997; margin-left: 32px;}
+    .function-return-semicolon {color: #D60000;}
+    .else-tagName {}
+
+
+
+
+
+
+    .function-color:hover { color: #fff; background: #B53838; }
+    .hover-function { display: none; position: absolute; top: 0; right: 0; background: url(javascript.png) no-repeat -773px -891px; width: 800px; height: 800px; z-index: 99999;}
+code, body {position: relative; z-index: 888;}
+.function-hover { display: block; transition: 1s;}
+
+
+.allstyle { display: none; position: absolute; top: 0; right: 0; width: 800px; height: 800px; z-index: 99999; background: url(javascript.png) no-repeat -773px -891px;}
+
+
+.var-array:hover {color: #fff; background: #B53838;}
+.var-array-hover { display: block; transition: 1s; background: url(javascript.png) no-repeat -900px -2000px;}
+
+
+
+
+
+.var-color:hover {color: #fff; background: #17B704;}
+.var-color-hover { display: block; transition: 1s; background: url(javascript.png) no-repeat -970px -400px;}
+
+    iframe {width: 1200px; height: 800px; position: absolute;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    

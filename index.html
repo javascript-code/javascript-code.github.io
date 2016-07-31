@@ -1,0 +1,461 @@
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+
+  <script type="text/javascript" src="menu_jb.js">
+  </script>
+  </head>
+<body>
+
+  <code class="script">
+    <div class="jsie" >
+    ie=document.all?1:0 <br>
+    n=document.layers?1:0
+    </div>
+    <section class="var-block">
+    <div class="var">
+    <span class="var-color">var</span> <span class="var-name">MenuBars</span><span class="var-equal">=</span><span class="var-new">new</span> <span class="var-array">Array</span><span class="var-open-parenthesis">(</span><span class="var-array-namber">4</span><span class="var-close-parenthesis">)</span><span class="var-semicolon">;</span>
+    </div>
+    <div class="var">
+    <span class="var-color">var</span> <span class="var-name">ActiveMenuBars</span><span class="var-equal">=</span><span class="var-new">new</span> <span class="var-array">Array</span><span class="var-open-parenthesis">(</span><span class="var-array-namber">2</span><span class="var-close-parenthesis">)</span><span class="var-semicolon">;</span>
+    </div>
+    <div class="var">
+    <span class="var-color">var</span> <span class="var-name">ActiveMenuBarsCount</span><span class="var-equal">=</span><span class="var-namber">0</span><span class="var-semicolon">;</span>
+    </div>
+    <div class="var">
+    <span class="var-color">var</span> <span class="var-name">ActivePopUpLevel</span><span class="var-equal">=</span><span class="var-minus">-</span><span class="var-namber">1</span><span class="var-semicolon">;</span>
+    </div>
+
+    <div class="var">
+    <span class="var-color">var</span> <span class="var-name">TOut</span>
+    </div>
+    <div class="var">
+    <span class="var-color">var</span> <span class="var-name">Tm</span><span class="var-equal">=</span><span class="var-namber">400</span><span class="var-semicolon">;</span>
+    </div>
+    <div class="var">
+    <span class="var-color">var</span> <span class="var-name">ImgWidth</span><span class="var-equal">=</span><span class="var-namber">58</span><span class="var-semicolon">;</span>
+    </div>
+    <div class="var">
+    <span class="var-color">var</span> <span class="var-name">ImgHeight</span><span class="var-equal">=</span><span class="var-namber">80</span><span class="var-semicolon">;</span>
+    </div>
+    <div class="var">
+    <span class="var-color">var</span> <span class="var-name">BarLeft</span><span class="var-equal">=</span><span class="var-namber">10</span><span class="var-semicolon">;</span>
+    </div>
+    </section>
+    <section class="function-block">
+    <span class="function-color">function</span> <span class="getOffsetTop">getOffsetTop</span><span class="function-open">(</span><span class="layer">layer</span><span class="function-close">)</span>
+    <div class="function">
+    <span class="function-open-parenthesis">{</span>
+      <div class="var">
+      <span class="var-color">var</span> <span class="var-name">value</span> <span class="var-equal">=</span> <span class="var-namber">0</span><span class="var-semicolon">;</span>
+      </div>
+      <div class="block-if-else">
+      <div class="block-if">
+      <span class="if-color">if</span> <span class="if-open-n">(</span><span class="if-n" >n</span><span class="if-close-n">)</span>
+      <div class="if">
+      <span class="if-open-parenthesis">{</span>
+        <div class="if-in"><span class="object">object</span> = <span class="document">document</span><span class="if-point" >.</span><span class="getElementById">getElementById</span><span class="if-open-parenthesis-oval">(</span><span class="layer">layer</span><span class="if-close-parenthesis-oval">)<span class="if-semicolon">;</span></div>
+        <div class="if-in"><span class="value">value</span> = <span class="object">object</span><span class="if-point" >.</span></span><span class="offsetTop">offsetTop</span><span class="if-semicolon">;</span></div>
+        <div class="if-in"><span class="while">while</span> (<span class="object">object</span><span class="if-point" >.</span><span class="if-tagName">tagName</span> <span class="if-not-equal" >!=</span> '<span class="if-tag-body">BODY</span>' <span class="if-and-and" >&&</span> <span class="object">object</span><span class="if-point" ><span class="if-point" >.</span></span><span class="offsetParent">offsetParent</span>)</div>
+        <div class="inif">
+        {
+          <div class="if-in"><span class="object">object</span> <span class="if-equal"> = <span class="object">object</span><span class="if-point" >.</span><span class="offsetParent">offsetParent</span><span class="if-semicolon">;</span></div>
+          <div class="if-in"><span class="value">value</span> <span class="if-plus-equal" >+=</span> <span class="object">object</span><span class="if-point" >.</span><span class="offsetTop">offsetTop</span><span class="if-semicolon">;</span></div>
+        }
+        </div>
+      <span class="if-close-parenthesis">}</span>
+      </div>
+      </div>
+      <div class="block-else">
+      <span class="else-color" >else</span>
+        <div class="else">
+        <span class="else-open-parenthesis">{</span>
+          <div class="else-in"><span class="else-in-if">if</span> <span class="else-in-if-open">(</span><span class="document">document</span><span class="else-point">.</span>all['IE4' + <span class="layer">layer</span>]<span class="else-in-if-close">)</span></div>
+          <div class="else-in-if-parenthesis-if">
+          <div class="else-in">{</div>
+            <div class="else-in-if-block"><span class="layer">layer</span> = 'IE4' + <span class="layer">layer</span><span class="else-semicolon">;</span></div>
+          <div class="else-in">}</div>
+          </div>
+          <div class="else-in"><span class="object">object</span> = <span class="document">document</span><span class="else-point">.</span>all[<span class="layer">layer</span>]<span class="else-semicolon">;</span></div>
+          <div class="else-in"><span class="value">value</span> = <span class="object">object</span><span class="else-point">.</span><span class="offsetTop">offsetTop</span><span class="else-semicolon">;</span></div>
+          <div class="else-in"><span class="while">while</span> (<span class="object">object</span>.<span class="if-tagName">tagName</span> != '<span class="else-tag-body">BODY</span>')</div>
+          <div class="else-in-if-parenthesis">
+          <div class="else-in">{</div>
+            <div class="else-in-while"><span class="object">object</span> = <span class="object">object</span><span class="else-point">.</span>offsetParent<span class="else-semicolon">;</span></div>
+            <div class="else-in-while"><span class="value">value</span> += <span class="object">object</span><span class="else-point">.</span><span class="offsetTop">offsetTop</span><span class="else-semicolon">;</span></div>
+          <div class="else-in">}</div>
+          </div>
+        <span class="else-close-parenthesis">}
+        </div>
+        </div>
+        <div class="function-return" >
+       <span class="return">return</span> (<span class="value">value</span>)<span class="function-return-semicolon" >;</span>
+       </div>
+       </div>
+    <span class="function-close-parenthesis">}</span>
+    </div>
+    </section>
+    <section class="function-block">
+    <span class="function-color">function</span> getOffsetLeft(layer)
+    <div class="function">
+    <span class="function-open-parenthesis">{</span>
+      <div class="var">
+      <span class="var-color">var</span> <span class="var-name">value</span> <span class="var-equal">=</span> <span class="var-namber">0</span><span class="var-semicolon">;</span>
+      </div>
+      <div class="block-if-else">
+      <div class="block-if">
+      <span class="if-color">if</span> <span class="if-open-n">(</span><span class="if-n" >n</span><span class="if-close-n">)</span>
+      <div class="if">
+      <span class="if-open-parenthesis">{</span>
+        <div class="if-in"><span class="object">object</span> = <span class="document">document</span><span class="if-point" >.</span><span class="getElementById">getElementById</span><span class="if-open-parenthesis-oval">(</span><span class="layer">layer</span><span class="if-close-parenthesis-oval">)</span><span class="if-semicolon">;</span></div>
+        <div class="if-in"><span class="value">value</span> = <span class="object">object</span><span class="if-point" >.</span>offsetLeft<span class="if-semicolon">;</span></div>
+        <div class="if-in">while (<span class="object">object</span><span class="if-point" >.</span><span class="if-tagName">tagName</span> <span class="if-not-equal" >!=</span> '<span class="if-tag-body">BODY</span>' <span class="if-and-and" >&&</span> object<span class="if-point" >.</span><span class="offsetParent">offsetParent</span>)</div>
+        <div class="inif">
+        {
+          <div class="if-in"><span class="object">object</span> <span class="if-equal">=</span> <span class="object">object</span><span class="if-point" >.</span><span class="offsetParent">offsetParent</span><span class="if-semicolon">;</span></div>
+          <div class="if-in"><span class="value">value</span> <span class="if-plus-equal" >+=</span> <span class="object">object</span><span class="if-point" >.</span>offsetLeft<span class="if-semicolon">;</span></div>
+        }
+        </div>
+      <span class="if-close-parenthesis">}</span>
+      <div class="if">
+      </div>
+      <div class="block-else">
+      <span class="else-color" >else</span>
+        <div class="else">
+        <span class="else-open-parenthesis">{</span>
+          <div class="else-in">if (<span class="document">document</span><span class="else-point">.</span>all['IE4' + layer])</div>
+          <div class="else-in-if-parenthesis-if">
+          <div class="else-in">{</div>
+            <div class="else-in-if-block">layer = 'IE4' + layer;</div>
+          <div class="else-in">}</div>
+          </div>
+          <span class="object">object</span> = <span class="document">document</span><span class="else-point">.</span>all[layer];
+          <span class="value">value</span> = <span class="object">object</span><span class="if-point" >.</span>offsetLeft;
+          <div class="else-in">while (<span class="object">object</span><span class="else-point">.</span><span class="else-tagName">tagName</span> != '<span class="else-tag-body">BODY</span>')</div>
+          <div class="else-in-if-parenthesis">
+          <div class="else-in">{</div>
+            <div class="else-in-while"><span class="object">object</span> = <span class="object">object</span><span class="else-point">.</span>offsetParent;</div>
+            <div class="else-in-while"><span class="value">value</span> += <span class="object">object</span><span class="else-point">.</span>offsetLeft;</div>
+          <div class="else-in">}</div>
+          <div class="else-in-if-parenthesis">
+        <span class="else-close-parenthesis">}</span>
+        </div>
+        </div>
+        </div>
+        <div class="function-return" >
+       <span class="return">return</span> (<span class="value">value</span>)<span class="function-return-semicolon" >;</span>
+       </div>
+
+    <span class="function-close-parenthesis">}</span>
+    </div>
+    </section>
+
+
+
+
+    <section class="function-block">
+    <span class="function-color">function</span> getOffsetWidth<span class="function-open">(</span><span class="layer">layer</span><span class="function-close">)</span>
+    <div class="function">
+    { 
+      <div class="var">
+      <span class="var-color">var</span> <span class="var-name">value</span> <span class="var-equal">=</span> <span class="var-namber">0</span><span class="var-semicolon">;</span>
+      </div>
+      <div class="block-if-else">
+      <div class="block-if">
+      if (ie)
+      <div class="if">
+      {
+        value = document.getElementById(layer).offsetWidth;
+      }
+      </div>
+      </div>
+      <div class="block-else">
+      else
+      {
+        value = document.layers[layer].document.width;
+      }
+      </div>
+      return (value);
+      </div>
+    }
+    </div>
+    </section>
+
+
+
+
+
+    <section class="function-block">
+    <span class="function-color">function</span> getOffsetHeight<span class="function-open">(</span>layer<span class="function-close">)</span>
+    <div class="function">
+    {
+      <div class="var">
+      <span class="var-color">var</span> <span class="var-name">value</span> <span class="var-equal">=</span> <span class="var-namber">0</span><span class="var-semicolon">;</span>
+      </div>
+      <div class="block-if-else">
+      <div class="block-if">
+      if (ie)
+      <div class="if">
+      {
+        value = document.getElementById(layer).offsetHeight;
+      }
+      </div>
+      </div>
+      <div class="block-else">
+      else
+      {
+        value = document.layers[layer].document.height;
+      }
+      </div>
+      return (value);
+      </div>
+    }
+    </div>
+    </section>
+
+
+
+    <section class="function-block">
+    <span class="function-color">function</span> HideMenuBar<span class="function-open">(</span>MnuIdName<span class="function-close">)</span>
+    <div class="function">
+    {
+      ActivePopUpLevel=ActivePopUpLevel-1;
+      <div class="block-if-else">
+      <div class="block-if">
+      if (ie)
+      <div class="if">
+      {
+        document.all[MnuIdName].style.visibility="Hidden";
+      }
+      </div>
+      </div>
+      <div class="block-else">
+      else if(n)
+      {
+        document.layers[MnuIdName].visibility="hide";
+      }
+      </div>
+      </div>
+    }
+    </div>
+    </section>
+
+
+    <section class="function-block">
+    <span class="function-color">function</span> HideMenus<span class="function-open">(</span>MnuIndex,MnuIdName<span class="function-close">)</span>
+    <div class="function">
+    {
+      <div class="block-if-else">
+      <div class="block-if">
+      if ((ActiveMenuBars[MnuIndex]!=MnuIdName) && (ActiveMenuBarsCount>0))
+      <div class="if">
+      {
+        for (var i=ActiveMenuBarsCount-1;i>=MnuIndex;i--)
+        {
+          var S=ActiveMenuBars[i];
+          HideMenuBar(S);
+        }
+        ActiveMenuBarsCount-=(MnuIndex+1);
+        return 1;
+      }
+      </div>
+      <div class="block-if">
+      return 0;
+      </div>
+    }
+    </div>
+
+    </section>
+
+
+
+    <section class="function-block">
+    <span class="function-color">function</span> ShowTpMenu<span class="function-open">(</span>name,parrentn<span class="function-close">)</span>
+    <div class="function">
+    {
+      window.clearTimeout(TOut);
+
+      <div class="var">
+      <span class="var-color">var</span> MnuLeft=getOffsetLeft(parrentn);
+      <span class="var-color">var</span> MnuTop=getOffsetTop(parrentn)+getOffsetHeight(parrentn);
+      </div>
+      <div class="block-if-else">
+      <div class="block-if">
+      if (HideMenus(0,name))
+      <div class="if">
+      {
+      }
+      </div>
+      </div>
+      <div class="block-if">
+      if (ActivePopUpLevel<0)
+      <div class="if">
+      {
+        ActiveMenuBarsCount=1;
+        ActivePopUpLevel=0;
+      }
+      </div)>
+      </div>
+      ActiveMenuBars[0]=name;
+
+      <div class="block-if">
+      if (ie)
+      <div class="if">
+      {
+        document.all[name].style.left=MnuLeft;
+        document.all[name].style.top=MnuTop;
+        document.all[name].style.visibility="visible";
+      }
+      </div>
+      </div>
+      <div class="block-else">
+      else if(n)
+      <div class="if">
+      {
+        <div class="if-in">document.layers[name].style.left=MnuLeft;</div>
+        <div class="if-in">document.layers[name].style.top=MnuTop;</div>
+        <div class="if-in">document.layers[name].visibility="show";</div>
+      }
+      </div>
+      </div>
+      </div>
+    }
+    </div>
+    </section>
+
+
+
+
+
+    <section class="function-block">
+    <span class="function-color">function</span> ShowPopUpMenu<span class="function-open">(</span>name,parrentn<span class="function-close">)</span>
+    <div class="function">
+    {
+      <div class="var">
+      <span class="var-color">var</span> str=new String(name);
+      <span class="var-color">var</span> PopUpLevel=(str.substr(4,1))*1;
+
+      <span class="var-color">var</span> MnuLeft=getOffsetLeft(parrentn)+getOffsetWidth(parrentn)+5;
+      <span class="var-color">var</span> MnuTop=getOffsetTop(parrentn);
+      </div>
+      <div class="block-if-else">
+      <div class="block-if">
+      if (HideMenus(PopUpLevel-1,name))
+      <div class="if">
+      {
+
+      }
+      </div>
+      </div>
+
+      window.clearTimeout(TOut);
+
+      <div class="block-if">
+      if (ActivePopUpLevel<(PopUpLevel))
+      <div class="if">
+      {
+        <div class="if-in">ActiveMenuBarsCount=PopUpLevel;</div>
+        <div class="if-in">ActivePopUpLevel=(PopUpLevel)</div>
+      }
+      </div>
+      </div>
+      ActiveMenuBars[(PopUpLevel-1)]=name;
+
+      <div class="block-if">
+      if (ie)
+      <div class="if">
+      {
+        <div class="if-in">document.all[name].style.left=MnuLeft;</div>
+        <div class="if-in">document.all[name].style.top=MnuTop;</div>
+        <div class="if-in">document.all[name].style.visibility="visible";</div>
+      }
+      </div>
+      </div>
+      <div class="block-else">
+      else if(n)
+      <div class="if">
+      {
+        <div class="if-in">document.layers[name].style.left=MnuLeft;</div>
+        <div class="if-in">document.layers[name].style.top=MnuTop;</div>
+        <div class="if-in">document.layers[name].visibility="show";</div>
+      }
+      </div>
+      </div>
+      </div>
+    }
+    </div>
+    </section>
+    
+
+
+
+
+
+    <section class="function-block">
+    <div class="function">function</div> mnuOnMouseOut<span class="function-open">(</span><span class="function-close">)</span>
+    <div class="function">
+    {
+      TOut=window.setTimeout('HideMenus(0,"m")',400);
+    }
+    </div>
+    </section>
+
+
+
+    <section class="function-block">
+    <div class="function">function</div> mnuOnClick<span class="function-open">(</span><span class="function-close">)</span>
+    <div class="function">
+    {
+      HideMenus(0,"m");
+    }
+    </div>
+    </section>
+
+
+
+  </code>
+
+
+<div class="hover-function allstyle" ></div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+
+
+$('.function-color').hover(
+   function(){ $('.hover-function').addClass('function-hover') },
+   function(){ $('.hover-function').removeClass('function-hover') }
+)
+
+
+
+
+$('.var-array').hover(
+   function(){ $('.allstyle').addClass('var-array-hover') },
+   function(){ $('.allstyle').removeClass('var-array-hover') }
+)
+
+$('.var-color').hover(
+   function(){ $('.allstyle').addClass('var-color-hover') },
+   function(){ $('.allstyle').removeClass('var-color-hover') }
+)
+
+
+
+</script>
+
+
+<iframe src="https://atlas.mindmup.com/2016/03/88735cb0cf3a0133dab27dbc593550ff/javascript/index.html"></iframe>
+
+
+
+
+</body>
+</html>
+
+
+
+
